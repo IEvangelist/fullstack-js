@@ -5,7 +5,7 @@
     {
       "file": "src/Api/index.ts",
       "description": "The API project is a simple express TypeScript-based app, that's responsible for serving fake/random weather forecasts on a single endpoint: `/weatherforecast`.\r\n\r\n```typescript\r\napp.get('/weatherforecast', (_, res) => {\r\n  const forecasts: WeatherForecasts = Array.from({ length: 5 }, (_, index) => {\r\n      const date = new Date();\r\n      date.setDate(date.getDate() + index + 1);\r\n\r\n      return {\r\n          date: date.toISOString().split('T')[0],\r\n          temperatureC: Math.floor(Math.random() * 75) - 20,\r\n          summary: summaries[Math.floor(Math.random() * summaries.length)]\r\n      };\r\n  });\r\n\r\n  res.json(forecasts);\r\n});\r\n```\r\n\r\nReview the following, and then select the **Insert code** button to add this endpoint—then select **Next**.\r\n",
-      "line": 25
+      "line": 12
     },
     {
       "file": "src/App/src/index.js",
@@ -14,13 +14,13 @@
     },
     {
       "file": "src/App/src/components/App.js",
-      "description": "The `App` makes a request to the configured `api/weatherforecast` endpoint. Define a request weather function:\r\n\r\n```typescript\r\nconst requestWeather = async () => {\r\n  const weather = await fetch(\"api/weatherforecast\");\r\n  console.log(weather);\r\n    \r\n  const weatherJson = await weather.json();\r\n  console.log(weatherJson);\r\n    \r\n  setForecasts(weatherJson);\r\n};\r\n```\r\n\r\nAfter reviewing the `requestWeather` function, select **Insert code** and then **Next**.",
-      "line": 16
+      "description": "The `App` makes a request to the configured `api/weatherforecast` endpoint. Define a request weather function:\r\n\r\n```typescript\r\n  const requestWeather = async () => {\r\n    const weather = await fetch(\"api/weatherforecast\");\r\n    console.log(weather);\r\n        \r\n    const weatherJson = await weather.json();\r\n    console.log(weatherJson);\r\n        \r\n    setForecasts(weatherJson);\r\n  };\r\n```\r\n\r\nAfter reviewing the `requestWeather` function, select **Insert code** and then **Next**.",
+      "line": 8
     },
     {
       "file": "src/App/src/components/App.js",
       "description": "The resulting JSON is slatted into an HTML table.",
-      "line": 37
+      "line": 46
     },
     {
       "file": "src/App/webpack.config.js",

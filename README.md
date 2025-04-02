@@ -6,7 +6,7 @@ To get started, select the following "Open in GitHub Codespaces" button:
 
 ## 🗺️ Quick tour
 
-This repository provides a [CodeTour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour) experience.
+This repository provides a [CodeTour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour) experience. For the best experience, ensure that the integrated terminal is closed.
 
 > [!IMPORTANT]
 > You have to have this repo open in Visual Studio Code or in a GitHub Codespace.
