@@ -1,0 +1,56 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Quick tour",
+  "steps": [
+    {
+      "file": "src/Api/index.ts",
+      "description": "The API project is a simple express TypeScript-based app, that's responsible for serving fake/random weather forecasts on a single endpoint: `/weatherforecast`.",
+      "line": 11
+    },
+    {
+      "file": "src/App/src/index.js",
+      "description": "The frontend app, is a simple React app that's responsible for fetching the API's weather forecast.",
+      "line": 9
+    },
+    {
+      "file": "src/App/src/components/App.js",
+      "description": "It makes a request to the configured `api/weatherforecast` endpoint.",
+      "line": 8
+    },
+    {
+      "file": "src/App/src/components/App.js",
+      "description": "The resulting JSON is slatted into an HTML table.",
+      "line": 46
+    },
+    {
+      "file": "src/App/webpack.config.js",
+      "description": "There's a proxy that intercepts `api` requests and forwards them to the appropriate service address.",
+      "line": 11
+    },
+    {
+      "file": "src/App/webpack.config.js",
+      "description": "These environment variables are automatically configured and injected as part of **Aspire**.",
+      "line": 13
+    },
+    {
+      "file": "src/Host/Program.cs",
+      "description": "The .NET Aspire app host project is responsible for locally orchestrating projects, containers, and executables. Think of this C# file like you would a _docker compose_ file, where you can express resources and dependencies between them.",
+      "line": 1
+    },
+    {
+      "file": "src/Host/Program.cs",
+      "description": "Here, we add an NPM app named `api` that points to our `../Api` directory. We express that we want an `npm install` to occur as part of the orchestration. Finally, we set an HTTP endpoint that maps to the well-known `PORT` environment variable.",
+      "line": 3
+    },
+    {
+      "file": "src/Host/Program.cs",
+      "description": "Similarly, we add our frontend app, pointing to the `../App` directory, we also express our desire for `npm install` to occur and provide the sample `PORT` mapping on the HTTP endpoint. But this also introduces a dependency, by using the `WithReference` API. In other words, this expresses that the `app` depends on the `api`. We're able to \"wait\" for the `api` to be in a ready state. We can also provide any other environment variables we need, in this case, we set `BROWSER` to `none` which prevents the React app from automatically opening. Instead, we let the app host manage that for us.",
+      "line": 7
+    },
+    {
+      "file": "src/Host/Program.cs",
+      "description": "The distributed application builder is built and run. This orchestrates these two apps together. Select the **Play** button in the top-right corner of this file to start.",
+      "line": 14
+    }
+  ]
+}

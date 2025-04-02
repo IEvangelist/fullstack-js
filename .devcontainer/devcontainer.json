@@ -33,7 +33,8 @@
 			"extensions": [
 				"ms-dotnettools.csdevkit",
 				"GitHub.copilot-chat",
-				"GitHub.copilot"
+				"GitHub.copilot",
+				"vsls-contrib.codetour"
 			]
 		}
 	}

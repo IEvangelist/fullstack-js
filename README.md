@@ -4,6 +4,12 @@ To get started, select the following "Open in GitHub Codespaces" button:
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/IEvangelist/fullstack-js)
 
+## 🗺️ Quick tour
+
+This repository provides a CodeTour experience. To start the tour, expand the CodeTour tab under the **Explorer** pane on the left side of the screen. Select the **Quick tour** option and press the **Start tour** button.
+
+While in the tour, navigate through the tour using the **Next** and **Previous** buttons.
+
 ## ✅ Run the app
 
 You can run this app locally after cloning this repository, or you can run it in GitHub Codespaces. This repository is configured to run in GitHub Codespaces, so you can get started quickly.
