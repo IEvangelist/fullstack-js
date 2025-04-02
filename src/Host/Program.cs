@@ -1,14 +1,9 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-var api = builder.AddNpmApp("api", "../Api")
-                 .WithNpmPackageInstallation()
-                 .WithHttpEndpoint(env: "PORT");
+// Add our "api" weather forecast service
 
-builder.AddNpmApp("app", "../App")
-       .WithNpmPackageInstallation()
-       .WithReference(api)
-       .WaitFor(api)
-       .WithEnvironment("BROWSER", "none")
-       .WithHttpEndpoint(env: "PORT");
+
+// Add our "app" frontend and depend on the "api"
+
 
 builder.Build().Run();

@@ -4,15 +4,8 @@ import "./App.css";
 function App() {
   const [forecasts, setForecasts] = useState([]);
 
-  const requestWeather = async () => {
-    const weather = await fetch("api/weatherforecast");
-    console.log(weather);
+  // Define a request weather function.
 
-    const weatherJson = await weather.json();
-    console.log(weatherJson);
-
-    setForecasts(weatherJson);
-  };
 
   useEffect(() => {
     requestWeather();
