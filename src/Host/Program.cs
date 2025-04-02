@@ -1,10 +1,10 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-var api = builder.AddNpmApp("api", "../api")
+var api = builder.AddNpmApp("api", "../Api")
                  .WithNpmPackageInstallation()
                  .WithHttpEndpoint(env: "PORT");
 
-builder.AddNpmApp("app", "../app")
+builder.AddNpmApp("app", "../App")
        .WithNpmPackageInstallation()
        .WithReference(api)
        .WaitFor(api)
