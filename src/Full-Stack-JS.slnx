@@ -1,0 +1,26 @@
+<Solution>
+  <Folder Name="/Api/" Id="02ea681e-c7d8-13c7-8484-4ac65e1b71e8">
+    <File Path="Api/index.ts" />
+    <File Path="Api/package-lock.json" />
+    <File Path="Api/package.json" />
+    <File Path="Api/tsconfig.json" />
+  </Folder>
+  <Folder Name="/App/" Id="40a4bb8d-553f-4af8-a6dc-1b729b22bc89">
+    <File Path="App/package-lock.json" />
+    <File Path="App/package.json" />
+    <File Path="App/webpack.config.js" />
+  </Folder>
+  <Folder Name="/App/src/" Id="b289a3fc-eb4f-4e32-b3e8-6a9e3642546b">
+    <File Path="App/src/index.css" />
+    <File Path="App/src/index.html" />
+    <File Path="App/src/index.js" />
+  </Folder>
+  <Folder Name="/App/src/components/" Id="1019f649-09c6-47d5-a1f3-0da09d5dd8df">
+    <File Path="App/src/components/App.css" />
+    <File Path="App/src/components/App.js" />
+  </Folder>
+  <Folder Name="/Solution Items/" Id="8ec462fd-d22e-90a8-e5ce-7e832ba40c5d">
+    <File Path=".gitignore" />
+  </Folder>
+  <Project Path="Host/Host.csproj" />
+</Solution>
