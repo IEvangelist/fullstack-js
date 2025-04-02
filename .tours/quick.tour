@@ -4,17 +4,17 @@
   "steps": [
     {
       "file": "src/Api/index.ts",
-      "description": "The API project is a simple express TypeScript-based app, that's responsible for serving fake/random weather forecasts on a single endpoint: `/weatherforecast`.\r\n\r\n```typescript\r\napp.get('/weatherforecast', (_, res) => {\r\n  const forecasts: WeatherForecasts = Array.from({ length: 5 }, (_, index) => {\r\n      const date = new Date();\r\n      date.setDate(date.getDate() + index + 1);\r\n\r\n      return {\r\n          date: date.toISOString().split('T')[0],\r\n          temperatureC: Math.floor(Math.random() * 75) - 20,\r\n          summary: summaries[Math.floor(Math.random() * summaries.length)]\r\n      };\r\n  });\r\n\r\n  res.json(forecasts);\r\n});\r\n```\r\n\r\nReview the following, and then select the **Insert code** button to add this endpoint—then select **Next**.\r\n",
+      "description": "The API project is a simple express TypeScript-based app, that's responsible for serving fake/random weather forecasts on a single endpoint: `/weatherforecast`.\r\n\r\n```typescript\r\napp.get('/weatherforecast', (_, res) => {\r\n  const forecasts: WeatherForecasts = Array.from({ length: 5 }, (_, index) => {\r\n      const date = new Date();\r\n      date.setDate(date.getDate() + index + 1);\r\n\r\n      return {\r\n          date: date.toISOString().split('T')[0],\r\n          temperatureC: Math.floor(Math.random() * 75) - 20,\r\n          summary: summaries[Math.floor(Math.random() * summaries.length)]\r\n      };\r\n  });\r\n\r\n  res.json(forecasts);\r\n});\r\n```\r\n\r\nReview the preceding code, and then select the **Insert code** button to add this endpoint—then select **Next** to continue.\r\n",
       "line": 12
     },
     {
       "file": "src/App/src/index.js",
-      "description": "The frontend app, is a simple React app that's responsible for fetching the API's weather forecast.",
+      "description": "The frontend app is entirely separate from the `api` app. It's a simple React app that's responsible for fetching the API's weather forecast, and rendering the forecast in a table.",
       "line": 9
     },
     {
       "file": "src/App/src/components/App.js",
-      "description": "The `App` makes a request to the configured `api/weatherforecast` endpoint. Define a request weather function:\r\n\r\n```typescript\r\n  const requestWeather = async () => {\r\n    const weather = await fetch(\"api/weatherforecast\");\r\n    console.log(weather);\r\n        \r\n    const weatherJson = await weather.json();\r\n    console.log(weatherJson);\r\n        \r\n    setForecasts(weatherJson);\r\n  };\r\n```\r\n\r\nAfter reviewing the `requestWeather` function, select **Insert code** and then **Next**.",
+      "description": "The `App` makes a request to the configured `api/weatherforecast` endpoint. Let's define a request weather function here:\r\n\r\n```typescript\r\n  const requestWeather = async () => {\r\n    const weather = await fetch(\"api/weatherforecast\");\r\n    console.log(weather);\r\n        \r\n    const weatherJson = await weather.json();\r\n    console.log(weatherJson);\r\n        \r\n    setForecasts(weatherJson);\r\n  };\r\n```\r\n\r\nAfter reviewing the `requestWeather` function, select **Insert code** and then **Next**.",
       "line": 8
     },
     {
@@ -45,12 +45,12 @@
     {
       "file": "src/Host/Program.cs",
       "description": "Similarly, we need add our frontend app, pointing to the `../App` directory, and we'll also express our desire for `npm install` to occur and provide the sample `PORT` mapping on the HTTP endpoint.\r\n\r\n```csharp\r\nbuilder.AddNpmApp(\"app\", \"../App\")\r\n       .WithNpmPackageInstallation()\r\n       .WithReference(api)\r\n       .WaitFor(api)\r\n       .WithEnvironment(\"BROWSER\", \"none\")\r\n       .WithHttpEndpoint(env: \"PORT\");\r\n```\r\n\r\nBut this also introduces a dependency, by using the `WithReference` API. In other words, this expresses that the `app` depends on the `api`. We're able to \"wait\" for the `api` to be in a ready state. We can also provide any other environment variables we need, in this case, we set `BROWSER` to `none` which prevents the React app from automatically opening. Instead, we let the app host manage that for us.\r\n\r\nSelect **Insert code** and **Next** to continue.",
-      "line": 7
+      "line": 9
     },
     {
       "file": "src/Host/Program.cs",
       "description": "The distributed application builder is built and run. This orchestrates these two apps together. Select the **Play** button in the top-right corner of this file to start.",
-      "line": 14
+      "line": 17
     }
   ]
 }
