@@ -6,7 +6,12 @@ To get started, select the following "Open in GitHub Codespaces" button:
 
 ## 🗺️ Quick tour
 
-This repository provides a CodeTour experience. To start the tour, expand the CodeTour tab under the **Explorer** pane on the left side of the screen. Select the **Quick tour** option and press the **Start tour** button.
+This repository provides a [CodeTour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour) experience.
+
+> [!IMPORTANT]
+> You have to have this repo open in Visual Studio Code or in a GitHub Codespace.
+
+To [start the tour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour#starting-tours) select the **Start CodeTour** button when prompted, or manually expand the CodeTour tab under the **Explorer** pane on the left side of the screen. Select the **Quick tour** option and press the **Start tour** button.
 
 While in the tour, navigate through the tour using the **Next** and **Previous** buttons.
 
